@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/replaybutton"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/replaybutton" />
+
+        <Button
+            android:id="@+id/volumebutton"
+            android:layout_width="160dp"
+            android:layout_height="130dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="190dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/loudvolumebutton" />
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="300dp"
+            android:layout_height="200dp"
+            android:layout_below="@id/volumebutton"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="20dp"
+            android:scrollbarStyle="outsideOverlay" >
+
+            <TextView
+                android:id="@+id/messagetext"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:scrollHorizontally="false"
+                android:scrollbarFadeDuration="1000"
+                android:text="@string/headline"
+                android:textColor="#000000"
+                android:textSize="30dp" />
+        </ScrollView>
+
+        <Button
+            android:id="@+id/bluetoothbutton"
+            android:layout_width="105dp"
+            android:layout_height="105dp"
+            android:layout_below="@id/volumebutton"
+            android:layout_marginLeft="135dp"
+            android:layout_marginTop="245dp"
+            android:background="@drawable/bluetoothoff" />
+
+        <Button
+            android:id="@+id/numberbutton"
+            android:layout_width="105dp"
+            android:layout_height="105dp"
+            android:layout_below="@id/volumebutton"
+            android:layout_marginLeft="245dp"
+            android:layout_marginTop="240dp"
+            android:background="@drawable/number" />
+
+        <Button
+            android:id="@+id/qrbutton"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_below="@id/volumebutton"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="245dp"
+            android:background="@drawable/qr" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="headline">Welcome to use TalkingBadge Application</string>
+    <string name="app_name">TalkingBadge</string>
+    <string name="loginwelcometext">TalkingBadge Demo for NordiCHI 2012</string>
+<string name="loginusernametext">Username:</string>
+<string name="loginpasswordtext">Password:</string>
+</resources>

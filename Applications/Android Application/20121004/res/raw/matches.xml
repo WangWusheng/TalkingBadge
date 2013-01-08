@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<matches>
+	<match>
+		<input>4357</input>
+		<position>test position 1</position>
+		<replytext>Sunshine</replytext>
+		<soundfile>EngQR.wav</soundfile>
+	</match>
+	<match>
+		<input>1426</input>
+		<position>test position 2</position>
+		<replytext>Second</replytext>
+		<soundfile>EngPin.wav</soundfile>
+	</match>
+	<match>
+		<input>3548</input>
+		<position>test position 3</position>
+		<replytext>心直口快</replytext>
+		<soundfile>ChiQR.wav</soundfile>
+	</match>
+	<match>
+		<input>4759</input>
+		<position>test position 4</position>
+		<replytext>天气预报</replytext>
+		<soundfile>ChiPin.wav</soundfile>
+	</match>
+	<match>
+		<input>8579</input>
+		<position>test position 5</position>
+		<replytext>Education</replytext>
+		<soundfile>EngQRP.wav</soundfile>
+	</match>
+	<match>
+		<input>7694</input>
+		<position>test position 6</position>
+		<replytext>America</replytext>
+		<soundfile>EngPinP.wav</soundfile>
+	</match>
+	<match>
+		<input>9562</input>
+		<position>test position 7</position>
+		<replytext>多难兴邦</replytext>
+		<soundfile>ChiQRP.wav</soundfile>
+	</match>
+	<match>
+		<input>4361</input>
+		<position>test position 8</position>
+		<replytext>春去秋来</replytext>
+		<soundfile>ChiPinP.wav</soundfile>
+	</match>
+	
+	<match>
+		<input>1234</input>
+		<position>train position 9</position>
+		<replytext>Graph</replytext>
+		<soundfile>EngQRTrain.wav</soundfile>
+	</match>
+		<match>
+		<input>5678</input>
+		<position>train position 10</position>
+		<replytext>Number</replytext>
+		<soundfile>EngPinTrain.wav</soundfile>
+	</match>
+	<match>
+		<input>9876</input>
+		<position>train position 11</position>
+		<replytext>图形测试</replytext>
+		<soundfile>ChiQRTrain.wav</soundfile>
+	</match>
+	<match>
+		<input>5432</input>
+		<position>train position 12</position>
+		<replytext>数字测试</replytext>
+		<soundfile>ChiPinTrain.wav</soundfile>
+	</match>
+	<match>
+		<input>111</input>
+		<position>学术会议前台</position>
+		<replytext>欢迎参加本次学术会议，会议即将开始。</replytext>
+		<soundfile>conference.wav</soundfile>
+	</match>
+	<match>
+		<input>222</input>
+		<position>办公室</position>
+		<replytext>有位先生在公司门卫处等你。</replytext>
+		<soundfile>office.wav</soundfile>
+	</match>
+	<match>
+		<input>333</input>
+		<position>候机大厅</position>
+		<replytext>请注意，您的登机口已更改为44号。</replytext>
+		<soundfile>airport.wav</soundfile>
+	</match>
+</matches>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="300dp"
+            android:layout_height="200dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="20dp"
+            android:scrollbarStyle="outsideOverlay" >
+
+            <TextView
+                android:id="@+id/loginwelcometext"
+                android:layout_width="fill_parent"
+                android:layout_height="155dp"
+                android:gravity="center"
+                android:scrollHorizontally="false"
+                android:scrollbarFadeDuration="1000"
+                android:text="@string/loginwelcometext"
+                android:textColor="#000000"
+                android:textSize="40dp" />
+        </ScrollView>
+
+        <TextView
+            android:id="@+id/loginusernametext"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/loginwelcometext"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="230dp"
+            android:text="@string/loginusernametext"
+            android:textColor="#000000"
+            android:textSize="30dp" />
+
+        <EditText
+            android:id="@+id/username"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/loginwelcometext"
+            android:layout_marginLeft="185dp"
+            android:layout_marginTop="230dp"
+            android:background="#EEEEEE"
+            android:inputType="textPersonName"
+            android:singleLine="true"
+            android:textColor="#000000" >
+
+            <requestFocus />
+        </EditText>
+
+        <TextView
+            android:id="@+id/loginpasswordtext"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/loginwelcometext"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="280dp"
+            android:text="@string/loginpasswordtext"
+            android:textColor="#000000"
+            android:textSize="30dp" />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/loginwelcometext"
+            android:layout_marginLeft="185dp"
+            android:layout_marginTop="280dp"
+            android:background="#EEEEEE"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            android:textColor="#000000" />
+
+        <Button
+            android:id="@+id/loginButton"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:layout_below="@id/loginwelcometext"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="350dp"
+            android:text="Log In"
+            android:textColor="#000000"
+            android:textSize="26dp" />
+
+        <Button
+            android:id="@+id/registButton"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:layout_below="@id/loginwelcometext"
+            android:layout_marginLeft="210dp"
+            android:layout_marginTop="350dp"
+            android:text="Regist"
+            android:textColor="#000000"
+            android:textSize="26dp" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="chatclient" default="build" basedir=".">
+    <description>
+      Build file for the BLIP Systems JSR-82 ChatClient MIDlet.
+      For testing with the BlipNet 3.0 SPP Chat Server sample code only.
+    </description>
+
+
+    <!-- properties for this build -->
+    <property name="src" location="src"/>
+    <property name="classes" location="classes"/>
+    <property name="dist" location="."/>
+    <property name="res" location="res"/>
+
+    <!-- Sun Java Wireless Toolkit 2.2 or higher is required to get JSR-82 API -->
+    <!-- Please Download from http://java.sun.com/j2me -->
+<!--    <property name="wtk.home" value="C:\WTK22"/>-->
+    <property name="wtk.midp.version" value="2.0"/>
+    <property name="wtk.cldc.version" value="1.0"/>
+    <property name="wtk.bluetooth.enabled" value="true"/>
+
+
+    <!-- Antenna is neeeded to build. -->
+    <!-- Please Download from http://antenna.sourceforge.net -->
+    <taskdef resource="antenna.properties"/>
+    <!-- Define two antenna tasks -->
+    <taskdef name="wtkbuild" classname="de.pleumann.antenna.WtkBuild"/>
+    <taskdef name="wtkpackage" classname="de.pleumann.antenna.WtkPackage"/>
+
+    <property name="name.jar" value="${ant.project.name}.jar"/>
+    <property name="name.jad" value="${ant.project.name}.jad"/>
+
+
+    <!-- Init tasks set ups the basic directory structure -->
+    <target name="init" description="Creates basic directories">
+        <!-- Create the time stamp -->
+        <tstamp/>
+        <!-- Create the build directory structure used by compile -->
+        <mkdir dir="${classes}"/>
+        <mkdir dir="${dist}"/>
+    </target>
+
+    <!-- Compile the source code -->
+    <target name="compile" depends="init" description="Compiles the source">
+        <!-- Compile the java code from ${src} into ${build} -->
+        <wtkbuild srcdir="${src}" destdir="${classes}" deprecation="on" target="1.3" source="1.3"/>
+    </target>
+
+    <!-- Build the jar file -->
+    <target name="build" depends="compile" description="Build the MIDlet jar file">
+
+        <!-- package the classes and update the jad file-->
+        <wtkpackage jarfile="${dist}/${name.jar}" jadfile="${dist}/${name.jad}" preverify="false">
+            <fileset dir="${classes}" includes="**/*.class"/>
+            <fileset dir="${res}" includes="**"/>
+        </wtkpackage>
+
+    </target>
+
+    <!-- Cleans directories -->
+    <target name="clean" description="Cleanup">
+        <delete dir="${classes}"/>
+    </target>
+
+    <!-- Clean Build -->
+    <target name="cleanbuild" depends="clean, build" description="Cleanup and build"/>
+
+
+</project>

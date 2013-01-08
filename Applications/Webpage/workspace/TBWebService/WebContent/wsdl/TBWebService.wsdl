@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://DefaultNamespace" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://DefaultNamespace" xmlns:intf="http://DefaultNamespace" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://DefaultNamespace" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="dbUpdate">
+    <complexType>
+     <sequence>
+      <element name="sqlContent" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="dbUpdateResponse">
+    <complexType>
+     <sequence>
+      <element name="dbUpdateReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="sendFile">
+    <complexType>
+     <sequence>
+      <element name="terminalMac" type="xsd:string"/>
+      <element name="content" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="sendFileResponse">
+    <complexType/>
+   </element>
+   <element name="dbQueryAllUsers">
+    <complexType/>
+   </element>
+   <element name="dbQueryAllUsersResponse">
+    <complexType>
+     <sequence>
+      <element name="dbQueryAllUsersReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getDevicesList">
+    <complexType/>
+   </element>
+   <element name="getDevicesListResponse">
+    <complexType>
+     <sequence>
+      <element name="getDevicesListReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="sendCommand">
+    <complexType>
+     <sequence>
+      <element name="terminalMac" type="xsd:string"/>
+      <element name="content" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="sendCommandResponse">
+    <complexType/>
+   </element>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="getDevicesListResponse">
+
+      <wsdl:part element="impl:getDevicesListResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="dbQueryAllUsersResponse">
+
+      <wsdl:part element="impl:dbQueryAllUsersResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="dbUpdateRequest">
+
+      <wsdl:part element="impl:dbUpdate" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="sendFileResponse">
+
+      <wsdl:part element="impl:sendFileResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="dbUpdateResponse">
+
+      <wsdl:part element="impl:dbUpdateResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="sendCommandResponse">
+
+      <wsdl:part element="impl:sendCommandResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getDevicesListRequest">
+
+      <wsdl:part element="impl:getDevicesList" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="dbQueryAllUsersRequest">
+
+      <wsdl:part element="impl:dbQueryAllUsers" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="sendCommandRequest">
+
+      <wsdl:part element="impl:sendCommand" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="sendFileRequest">
+
+      <wsdl:part element="impl:sendFile" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="TBWebService">
+
+      <wsdl:operation name="dbUpdate">
+
+         <wsdl:input message="impl:dbUpdateRequest" name="dbUpdateRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:dbUpdateResponse" name="dbUpdateResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="sendFile">
+
+         <wsdl:input message="impl:sendFileRequest" name="sendFileRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:sendFileResponse" name="sendFileResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="dbQueryAllUsers">
+
+         <wsdl:input message="impl:dbQueryAllUsersRequest" name="dbQueryAllUsersRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:dbQueryAllUsersResponse" name="dbQueryAllUsersResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getDevicesList">
+
+         <wsdl:input message="impl:getDevicesListRequest" name="getDevicesListRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getDevicesListResponse" name="getDevicesListResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="sendCommand">
+
+         <wsdl:input message="impl:sendCommandRequest" name="sendCommandRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:sendCommandResponse" name="sendCommandResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="TBWebServiceSoapBinding" type="impl:TBWebService">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="dbUpdate">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="dbUpdateRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="dbUpdateResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="sendFile">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="sendFileRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="sendFileResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="dbQueryAllUsers">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="dbQueryAllUsersRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="dbQueryAllUsersResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getDevicesList">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getDevicesListRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getDevicesListResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="sendCommand">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="sendCommandRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="sendCommandResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="TBWebServiceService">
+
+      <wsdl:port binding="impl:TBWebServiceSoapBinding" name="TBWebService">
+
+         <wsdlsoap:address location="http://localhost/TBWebService/services/TBWebService"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>
